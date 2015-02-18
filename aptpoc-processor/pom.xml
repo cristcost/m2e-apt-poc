@@ -14,6 +14,17 @@
 	<packaging>jar</packaging>
 	<name>Example of Annotation processing using Maven :: Annotation Processor</name>
 
+	<build>
+		<plugins>
+			<!-- Disable processing or maven will process this project itself -->
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${compiler.plugin.version}</version>
+				<configuration>
+					<proc>none</proc>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 
-	
 </project>
